@@ -1,0 +1,3 @@
+E:/Ccode/class 8/8.2/2-typedef/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/Ccode/class 8/8.2/2-typedef/cmake-build-debug/CMakeFiles/2_typedef.dir
+E:/Ccode/class 8/8.2/2-typedef/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,0 +1,3 @@
+E:/Ccode/class 8/8.3/2-modify-pointer/cmake-build-debug/CMakeFiles/2_modify_pointer.dir
+E:/Ccode/class 8/8.3/2-modify-pointer/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/Ccode/class 8/8.3/2-modify-pointer/cmake-build-debug/CMakeFiles/rebuild_cache.dir

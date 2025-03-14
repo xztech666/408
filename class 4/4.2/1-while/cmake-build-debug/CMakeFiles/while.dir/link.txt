@@ -1,0 +1,3 @@
+"E:\CLion 2021.1.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\while.dir/objects.a
+H:\environment\mingw64\bin\ar.exe cr CMakeFiles\while.dir/objects.a @CMakeFiles\while.dir\objects1.rsp
+H:\environment\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\while.dir/objects.a -Wl,--no-whole-archive -o while.exe -Wl,--out-implib,libwhile.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\while.dir\linklibs.rsp

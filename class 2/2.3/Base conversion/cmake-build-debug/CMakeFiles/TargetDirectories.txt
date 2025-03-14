@@ -1,0 +1,3 @@
+E:/Ccode/class 2/2.3/Base conversion/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/Ccode/class 2/2.3/Base conversion/cmake-build-debug/CMakeFiles/Base_conversion.dir
+E:/Ccode/class 2/2.3/Base conversion/cmake-build-debug/CMakeFiles/edit_cache.dir
