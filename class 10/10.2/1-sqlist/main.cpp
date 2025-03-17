@@ -39,12 +39,12 @@ void print_list(SqList L) {
     printf("\n");
 }
 
-// 顺序表的删除操作,因为L会改变,所以用引用   int &element:引用,返回被删除元素的值
+// 顺序表的删除操作,因为L会改变,所以用引用  i:要删除的元素的下标(int)  &element:引用的原因: 要修改删除的元素
 bool list_delete(SqList &L, int i, Elemtype &delete_element) {
     // 判断删除位置是否合法
     if (i < 1 || i > L.length)
     {
-        return false;
+        return false; // 删除失败,函数提前结束
     }
     // 保存要删除的元素
     delete_element = L.data[i - 1];
@@ -53,17 +53,17 @@ bool list_delete(SqList &L, int i, Elemtype &delete_element) {
     {
         L.data[j - 1] = L.data[j];
     }
-    L.length--;
+    L.length--; // 执行一次,长度减1
     return true;
 }
 
 // 顺序表的查找操作,找到了返回对应的下标,没找到返回0
 int locate_element(SqList L, Elemtype element) {
-    for(int i = 0; i < L.length; i++)
+    for(int i = 0; i < L.length; i++) // 遍历顺序表
     {
         if (L.data[i] == element)
         {
-            return i + 1; // 因为i是数组下标,所以要加1才是顺序表的下标
+            return i + 1; // 因为i是数组下标,所以要加1才是位置
         }
     }
     return 0;
@@ -87,8 +87,9 @@ int main() {
     {
         printf("insert sqList fail\n");
     }
-
-    Elemtype delete_element;
+    printf("------------------------------------");
+    // 删除操作
+    Elemtype delete_element; // 存储被删除的元素
     ret = list_delete(L, 1, delete_element);
     if (ret)
     {
@@ -100,6 +101,7 @@ int main() {
     {
         printf("delete sqList fail\n");
     }
+    printf("------------------------------------");
     int position; // 存储查找元素的位置
     position = locate_element(L, 40);
     if (position)
