@@ -1,6 +1,3 @@
-//
-// Created by anggenb on 2025/4/2.
-//
 # include<stdio.h>
 
 # define MAXSIZE 100
