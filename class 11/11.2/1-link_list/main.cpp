@@ -1,25 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// 头插法新建链表
+
 typedef int ElemType;
 
 typedef struct LNode {
-    ElemType data;
-    struct LNode *next;
+    ElemType data; // 节点数据域
+    struct LNode *next; //  节点指针域
 } LNode, *LinkList;
 
-void list_head_insert(LNode* &L) //LinkList和LNode*完全等价
+// 输入3,4,5,6,7,9999
+void list_head_insert(LinkList &L) //LinkList和LNode*完全等价
 {
-    L = (LNode*)malloc(sizeof(LNode)); //申请结构体大小的空间,切忌不能写sizeof(LinkList),只有八个字节空间
+    L = (LNode*)malloc(sizeof(LNode)); //申请结构体大小的空间,切忌不能写sizeof(LinkList), 否则会出错
     ElemType x;
     scanf("%d", &x);
-    LNode *s;
+    LNode *s; // 指向申请的新节点
     L->next = NULL;
     while (x != 9999)
     {
         s = (LNode*)malloc(sizeof(LNode));
         s->data = x;
-        s->next = L->next;
+        s->next = L->next; // 新节点的next指向原本链表的第一个节点
         L->next = s; // 头结点的next,指向新节点
         scanf("%d", &x);
     }
@@ -27,7 +30,7 @@ void list_head_insert(LNode* &L) //LinkList和LNode*完全等价
 
 void print_list(LinkList L)
 {
-    L = L->next;
+    L = L->next; // 跳过头结点
     while (L != NULL)
     {
         printf("%3d", L->data);
