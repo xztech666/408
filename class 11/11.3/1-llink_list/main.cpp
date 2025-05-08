@@ -13,15 +13,21 @@ void list_tail_insert(LinkList &L)
     L = (LinkList)malloc(sizeof(LNode));
     L->next = NULL;
     ElemType x;
-    LNode *s, *r = L; // s用来指向新建结点, r用来指向尾结点
+    scanf("%d", &x);
+    LNode *s, *r = L; // s用来指向新建结点,r用来指向尾结点
+    /*
+    *s：通常用于指向新创建的链表节点。
+    *r：指向链表的尾部节点，初始化时指向头结点 L，表示当前链表的最后一个节点是头节点。
+    */
     while(x!=9999)
     {
         s = (LNode *)malloc(sizeof(LNode)); // 为新节点申请空间
         s->data = x;
         r->next = s; // 将新结点插入到尾结点之后
         r = s; // r指向新的尾结点
+        scanf("%d", &x);
     }
-    r->next = NULL;
+    r->next = NULL; // 尾结点指向NULL
 }
 
 void print_list(LinkList L)
