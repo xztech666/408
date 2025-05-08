@@ -66,15 +66,15 @@ LinkList LocateElem(LinkList L, ElemType e)
 }
 
 // 往第i个位置插入
-bool ListInsert(LinkList &L, int i, ElemType e)
+bool ListInsert(LinkList L, ElemType InsertPos, ElemType InsertValue) // 不需要引用, 因为插入的是新结点
 {
-    LinkList p = GetElem(L, i-1);
+    LinkList p = GetElem(L, InsertPos-1);
     if (p == NULL)
     {
         return false;
     }
     LinkList s = (LinkList)malloc(sizeof(LLNode));
-    s->data = e;
+    s->data = InsertValue;
     s->next = p->next;
     p->next = s;
     return true;
@@ -96,16 +96,7 @@ int main() {
 //    list_head_insert(L);
     list_tail_insert(L);
     print_list(L);
-//    Search = GetElem(L, 3);
-//    if(Search!=NULL)
-//    {
-//        printf("%d\n", Search->data);
-//    }
-//    Search = LocateElem(L, 5);
-//    if(Search!=NULL)
-//    {
-//        printf("%d\n", Search->data);
-//    }
+
     ListInsert(L, 3, 666);
     print_list(L);
 
