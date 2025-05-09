@@ -1,4 +1,5 @@
-ToolSet: w64 6.0 (local)@H:\environment\mingw64
+ToolSet: 6.0 w64 (local)@H:\environment\mingw64
+Ninja: 1.12.1@E:\CLion 2025.1.1\bin\ninja\win\x64\ninja.exe
 Options: 
 
 Options:

@@ -68,12 +68,12 @@ LinkList LocateElem(LinkList L, ElemType e)
 // 往第i个位置插入
 bool ListInsert(LinkList L, ElemType InsertPos, ElemType InsertValue) // 不需要引用, 因为插入的是新结点
 {
-    LinkList p = GetElem(L, InsertPos-1);
+    LinkList p = GetElem(L, InsertPos-1); // 找到插入位置的前一个结点
     if (p == NULL)
     {
         return false;
     }
-    LinkList s = (LinkList)malloc(sizeof(LLNode));
+    LinkList s = (LinkList)malloc(sizeof(LLNode)); // 申请新结点
     s->data = InsertValue;
     s->next = p->next;
     p->next = s;
